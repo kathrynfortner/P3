@@ -14,10 +14,15 @@ var arrAvg = function(array) {
 
 var arrMax = function(array) {
 	"use strict";
-	return Math.max(array);
+	return Math.max.apply(Math, array);
 };
 
 var isMember = function(array, str) {
 	"use strict";
-	
+	var result = array.indexOf(str);
+	if(result != -1) {
+		return 'true'
+	} else {
+		return 'false'
+	};
 };
